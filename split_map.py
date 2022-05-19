@@ -1,6 +1,6 @@
 import csv
 from sys import argv
-with open("input-data.csv", "r") as f:
+with open(argv[2], "r") as f:
     reader = csv.DictReader(f)
     a = list(reader)
     maxlat = (float)(max(a, key=lambda x:x['lat'])["lat"])
