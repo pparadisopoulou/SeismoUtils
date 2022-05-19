@@ -1,9 +1,12 @@
 import csv
 from sys import argv
+if len(argv) <2 :
+    print ("Usage : python split_map.py <step> <input_filename>")
+    
 with open(argv[2], "r") as f:
     reader = csv.DictReader(f)
     a = list(reader)
-    asto esti tora
+
     maxlat = (float)(max(a, key=lambda x:x['lat'])["lat"])
     minlat = (float)(min(a, key=lambda x:x['lat'])["lat"])
 
