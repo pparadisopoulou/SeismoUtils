@@ -6,7 +6,7 @@ date_part =""
 time_part =""
 thessaloniki = []
 
-
+#added some comments
 athens_file = input("Enter the filename for the Athens input file (Default value : IMS.txt)\n") or "IMS.TXT"
 print(athens_file)
 thessaloniki_file = input("Enter the filename for the Thessaloniki input file (Default value : bulletin_ALL.txt)\n") or "bulletin_ALL.txt"
