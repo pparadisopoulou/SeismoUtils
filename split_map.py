@@ -1,8 +1,9 @@
 import csv
+import sys
 from sys import argv
 if len(argv) <2 :
     print ("Usage : python split_map.py <step> <input_filename>")
-    
+     
 with open(argv[2], "r") as f:
     reader = csv.DictReader(f)
     a = list(reader)
@@ -32,7 +33,7 @@ with open(argv[2], "r") as f:
                 lat = (float)(item["lat"])
                 lon = (float)(item["lon"])
                 if lat>(minlat + i*latstep) and lat<= (minlat+(i+1)*latstep) and lon>(minlon +j*lonstep) and lon<=(minlon +(j+1)*lonstep):
-                    print ("{0}\t{1}\t{2}\t{3}\t{4}\t{5}".format(i,j,item["DAz"], item["dip"], item["rake"],item["No"]))
+                   print ("{0}\t{1}\t{2}\t{3}\t{4}\t{5}\t{6}\t{7}".format(i,j,item["DAz"], item["dip"], item["rake"],item["No"],item["lat"],item["lon"]))
 
         
 
